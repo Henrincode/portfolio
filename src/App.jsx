@@ -11,12 +11,13 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Home />} />
         {/* Rota com layout */}
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} /> {/* Padrão / */}
-          {/* <Route path="sobre" element={<Sobre />} />
-          <Route path="contato" element={<Contato />} /> */}
-        </Route>
+        {/* <Route path="/*" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="sobre" element={<Sobre />} />
+          <Route path="contato" element={<Contato />} />
+        </Route> */}
       </Routes>
     </BrowserRouter>
   )
