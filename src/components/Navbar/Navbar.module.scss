@@ -1,0 +1,23 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.Navbar {
+    padding: 10px;
+    background-color: $color-background-bar;
+
+    .box {
+        justify-content: space-between;
+        align-items: baseline;
+
+        .logo {
+            font-size: 40px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+    }
+}

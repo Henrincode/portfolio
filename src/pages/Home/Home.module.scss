@@ -1,0 +1,18 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.Home {
+    .telaToda {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .apresentacao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}

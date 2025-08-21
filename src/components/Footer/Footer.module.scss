@@ -1,0 +1,8 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.Footer {
+    height: 200px;
+    font-size: 40px;
+    background-color: $color-background-bar;
+}
