@@ -8,7 +8,7 @@
 }
 
 @mixin flex-box {
-  @include container;
+  @include flex-container;
   max-width: 1200px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 @mixin body-local {
-  @include container;
+  @include flex-container;
   justify-content: center;
   flex: 1;
 }
