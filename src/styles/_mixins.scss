@@ -1,0 +1,28 @@
+@mixin flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@mixin flex-box {
+  @include container;
+  max-width: 1200px;
+}
+
+@mixin flex-row {
+  flex-direction: row;
+  justify-content: center;
+}
+
+@mixin flex-padding {
+    padding: 10px;
+}
+
+@mixin body-local {
+  @include container;
+  justify-content: center;
+  flex: 1;
+}

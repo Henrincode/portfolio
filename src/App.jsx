@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import './App.css'
+import './styles/global.scss'
 
 function App() {
 
   return (
     <>
-    
+
     </>
   )
 }
