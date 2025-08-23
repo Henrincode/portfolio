@@ -10,8 +10,8 @@ export default function Home() {
         <div className={styles.Home}>
             <div className={styles.telaToda + " container"}>
                 <Navbar />
-                <div className={styles.apresentacao + " box"}>
-                    <Particulas>
+                <Particulas>
+                    <div className={styles.apresentacao + " box"}>
                         <h1>Henrique Marques</h1>
                         <div className={styles.tecnologias + ' box'}>
                             <ul className="box row">
@@ -27,8 +27,8 @@ export default function Home() {
                                 <li><FaReact /><span>React</span></li>
                             </ul>
                         </div>
-                    </Particulas>
-                </div>
+                    </div>
+                </Particulas>
             </div>
             <Footer />
         </div>

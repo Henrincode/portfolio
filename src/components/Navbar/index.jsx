@@ -1,4 +1,5 @@
 import styles from "./Navbar.module.scss"
+import Particulas from "../Particulas"
 
 export default function Navbar() {
     return (

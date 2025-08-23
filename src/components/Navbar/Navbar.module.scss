@@ -2,8 +2,11 @@
 @use '../../styles/mixins' as *;
 
 .Navbar {
+    z-index: 100;
+    position: fixed;
+    top: 0;
     padding: 10px;
-    background-color: $color-background-bar;
+    background-color: rgba($color-background-bar, 0.9);
 
     .box {
         justify-content: space-between;

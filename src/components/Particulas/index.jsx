@@ -5,10 +5,11 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
+import styles from './Particulas.module.scss'
 import padrao from './padrao.json'
 
 
-export default function Particulas({ children }) {
+export default function Particulas({ children, className }) {
 
     const [init, setInit] = useState(false);
 
@@ -35,7 +36,7 @@ export default function Particulas({ children }) {
 
 
     return (
-        <div style={{ position: "relative", width: "100%", height: "100%", zIndex: -1}}>
+        <div className={styles.Particulas + ' ' + className} style={{ position: "relative", width: "100%", height: "100%" }}>
             {/* Partículas no fundo */}
             <Particles
                 id="tsparticles"
@@ -43,7 +44,7 @@ export default function Particulas({ children }) {
                 options={options}
             />
             {/* Conteúdo sobreposto */}
-            <div className="box" style={{ position: "relative", zIndex: 0, width: "100%", height: "100%" }}>
+            <div className="container" style={{ position: "relative", width: "100%", height: "100%" }}>
                 {children}
             </div>
         </div>

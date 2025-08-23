@@ -5,7 +5,7 @@
       "value": "#161a1d"
     },
     "image": "",
-    "position": "",
+    "position": "relative",
     "repeat": "",
     "size": "",
     "opacity": 1
@@ -24,7 +24,7 @@
   "defaultThemes": {},
   "delay": 0,
   "fullScreen": {
-    "enable": true,
+    "enable": false,
     "zIndex": 0
   },
   "detectRetina": true,
