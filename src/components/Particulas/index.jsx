@@ -5,9 +5,8 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-import styles from './Particulas.module.scss'
 import padrao from './padrao.json'
-
+import styles from './Particulas.module.scss'
 
 export default function Particulas({ children, className }) {
 
@@ -29,14 +28,14 @@ export default function Particulas({ children, className }) {
     }, []);
 
     const particlesLoaded = (container) => {
-        console.log(container);
+        // console.log(container);
     };
 
     const options = useMemo(() => (padrao), []);
 
 
     return (
-        <div className={styles.Particulas + ' ' + className}>
+        <div className={styles.Particulas + ' container ' + className}>
             {/* Partículas no fundo */}
             <Particles
                 id="tsparticles"
@@ -44,9 +43,9 @@ export default function Particulas({ children, className }) {
                 options={options}
             />
             {/* Conteúdo sobreposto */}
-            <div className={styles.children + ' container'}>
+            {/* <div className={styles.children + ' container'}> */}
                 {children}
-            </div>
+            {/* </div> */}
         </div>
     );
 }

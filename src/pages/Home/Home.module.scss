@@ -2,6 +2,7 @@
 @use '../../styles/mixins' as *;
 
 .Home {
+
     h1 {
         
         @media (max-width: 600px) {
@@ -10,12 +11,17 @@
         
     }
     .telaToda {
-        height: 100vh;
+        min-height: 100vh;
+    }
+
+    .Particulas {
+        flex: 1;
     }
     
     .apresentacao {
+        flex: 1;
         padding-top: 70px;
-        height: 100%;
+        padding-bottom: 20px;
 
         .tecnologias {
             margin-top: 50px;
@@ -44,11 +50,11 @@
                     background-color: rgba($color-background-bar, 0.8);
 
                     span {
-                        font-size: 12px;
+                        font-size: 10px;
                     }
 
                     &:hover {
-                        animation: lampadaFalhando 2s infinite;
+                        animation: lampadaFalhando 1.5s infinite;
                     }
                 }
             }
