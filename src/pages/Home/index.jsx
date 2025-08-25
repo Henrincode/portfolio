@@ -1,9 +1,10 @@
-import styles from "./Home.module.scss"
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import Particulas from "../../components/Particulas";
-
 import { FaReact, FaNpm, FaNodeJs, FaBootstrap, FaJsSquare, FaCss3Alt, FaHtml5, FaFigma, FaGithub, FaGitAlt } from "react-icons/fa";
+
+import styles from "./Home.module.scss"
+
 
 export default function Home() {
     return (
@@ -11,7 +12,7 @@ export default function Home() {
             <div className={styles.telaToda + " container"}>
                 <Navbar />
                 <Particulas>
-                    <div className={styles.apresentacao + " box"}>
+                    <div className={styles.apresentacao + " box pad"}>
                         <h1>Henrique Marques</h1>
                         <div className={styles.tecnologias + ' box'}>
                             <ul className="box row">

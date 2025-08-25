@@ -1,3 +1,14 @@
-.Particulas canvas {
-    position: absolute;
+.Particulas { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    canvas {
+        position: absolute;
+    }
+
+    .children {
+position: absolute;
+        inset: 0;
+    }
 }

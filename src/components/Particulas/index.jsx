@@ -36,7 +36,7 @@ export default function Particulas({ children, className }) {
 
 
     return (
-        <div className={styles.Particulas + ' ' + className} style={{ position: "relative", width: "100%", height: "100%" }}>
+        <div className={styles.Particulas + ' ' + className}>
             {/* Partículas no fundo */}
             <Particles
                 id="tsparticles"
@@ -44,7 +44,7 @@ export default function Particulas({ children, className }) {
                 options={options}
             />
             {/* Conteúdo sobreposto */}
-            <div className="container" style={{ position: "relative", width: "100%", height: "100%" }}>
+            <div className={styles.children + ' container'}>
                 {children}
             </div>
         </div>

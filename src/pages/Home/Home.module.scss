@@ -2,19 +2,19 @@
 @use '../../styles/mixins' as *;
 
 .Home {
-
     h1 {
-
-     @media (max-width: 600px) {
-        font-size: 36px;
-     }
-     
+        
+        @media (max-width: 600px) {
+            font-size: 36px;
+        }
+        
     }
     .telaToda {
         height: 100vh;
     }
-
+    
     .apresentacao {
+        padding-top: 70px;
         height: 100%;
 
         .tecnologias {
