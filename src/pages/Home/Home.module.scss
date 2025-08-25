@@ -4,83 +4,224 @@
 .Home {
 
     h1 {
-        
         @media (max-width: 600px) {
             font-size: 36px;
         }
-        
+
     }
+
     .telaToda {
         min-height: 100vh;
-    }
 
-    .Particulas {
-        flex: 1;
-    }
-    
-    .apresentacao {
-        flex: 1;
-        padding-top: 70px;
-        padding-bottom: 20px;
+        .Particulas {
+            flex: 1;
+        }
 
-        .tecnologias {
-            margin-top: 50px;
-            // width: 100%;
+        .apresentacao {
+            flex: 1;
+            padding-top: 70px;
+            padding-bottom: 20px;
 
-            ul {
-                list-style: none;
-                flex-wrap: wrap;
-                flex-direction: center;
-                gap: 30px;
+            .tecnologias {
+                margin-top: 50px;
+                // width: 100%;
 
-                user-select: none;
-                
-                
-                li {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 10px;
-                    // @include teste;
-                    width: 80px;
-                    padding: 10px;
-                    border-radius: 8px;
+                ul {
+                    list-style: none;
+                    flex-wrap: wrap;
+                    flex-direction: center;
+                    gap: 30px;
 
-                    font-size: 30px;
-                    background-color: rgba($color-background-bar, 0.8);
+                    user-select: none;
 
-                    span {
-                        font-size: 12px;
-                    }
 
-                    &:hover {
-                        animation: lampadaFalhando 1.5s infinite;
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
+                        width: 80px;
+                        padding: 10px;
+                        border-radius: 8px;
+
+                        font-size: 30px;
+                        background-color: rgba($color-background-bar, 0.8);
+
+                        svg {
+                            display: block;
+                        }
+
+                        span {
+                            font-size: 12px;
+                        }
+
+                        &:hover {
+                            animation: lampadaFalhando 1.5s infinite;
+                        }
                     }
                 }
+            }
+        }
+
+        .rolarMais {
+            position: absolute;
+            bottom: 10px;
+            color: rgba(#fff, 0.8);
+            font-size: 50px;
+            animation: subirBalançar 1.5s infinite;
+            filter: drop-shadow(0 0  10px #000);
+
+            svg {
+                display: block;
+            }
+
+            @media (max-width: 100px) {
+                display: none;
             }
         }
     }
 }
 
 @keyframes lampadaFalhando {
-    0%   { opacity: 1; box-shadow: 0 0 30px rgba(255, 255, 200, 0.8); }
-    5%   { opacity: 0.2; box-shadow: 0 0 5px rgba(255, 255, 200, 0.2); }
-    10%  { opacity: 0.8; box-shadow: 0 0 20px rgba(255, 255, 180, 0.6); }
-    15%  { opacity: 0.1; box-shadow: 0 0 2px rgba(255, 255, 180, 0.1); }
-    20%  { opacity: 1; box-shadow: 0 0 30px rgba(255, 255, 200, 0.8); }
-    25%  { opacity: 0.5; box-shadow: 0 0 15px rgba(255, 255, 200, 0.4); }
-    30%  { opacity: 0.9; box-shadow: 0 0 25px rgba(255, 255, 200, 0.7); }
-    35%  { opacity: 0.3; box-shadow: 0 0 8px rgba(255, 255, 200, 0.3); }
-    40%  { opacity: 1; box-shadow: 0 0 30px rgba(255, 255, 200, 0.8); }
-    50%  { opacity: 0.4; box-shadow: 0 0 10px rgba(255, 255, 200, 0.3); }
-    55%  { opacity: 1; box-shadow: 0 0 30px rgba(255, 255, 200, 0.8); }
-    60%  { opacity: 0.2; box-shadow: 0 0 5px rgba(255, 255, 200, 0.2); }
-    65%  { opacity: 0.9; box-shadow: 0 0 25px rgba(255, 255, 200, 0.7); }
-    70%  { opacity: 0.1; box-shadow: 0 0 2px rgba(255, 255, 200, 0.1); }
-    75%  { opacity: 1; box-shadow: 0 0 30px rgba(255, 255, 200, 0.8); }
-    80%  { opacity: 0.6; box-shadow: 0 0 15px rgba(255, 255, 200, 0.5); }
-    85%  { opacity: 0.95; box-shadow: 0 0 28px rgba(255, 255, 200, 0.75); }
-    90%  { opacity: 0.3; box-shadow: 0 0 8px rgba(255, 255, 200, 0.3); }
-    95%  { opacity: 1; box-shadow: 0 0 30px rgba(255, 255, 200, 0.8); }
-    100% { opacity: 1; box-shadow: 0 0 30px rgba(255, 255, 200, 0.8); }
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(255, 255, 200, 0.8);
+    }
+
+    5% {
+        opacity: 0.2;
+        box-shadow: 0 0 5px rgba(255, 255, 200, 0.2);
+    }
+
+    10% {
+        opacity: 0.8;
+        box-shadow: 0 0 20px rgba(255, 255, 180, 0.6);
+    }
+
+    15% {
+        opacity: 0.1;
+        box-shadow: 0 0 2px rgba(255, 255, 180, 0.1);
+    }
+
+    20% {
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(255, 255, 200, 0.8);
+    }
+
+    25% {
+        opacity: 0.5;
+        box-shadow: 0 0 15px rgba(255, 255, 200, 0.4);
+    }
+
+    30% {
+        opacity: 0.9;
+        box-shadow: 0 0 25px rgba(255, 255, 200, 0.7);
+    }
+
+    35% {
+        opacity: 0.3;
+        box-shadow: 0 0 8px rgba(255, 255, 200, 0.3);
+    }
+
+    40% {
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(255, 255, 200, 0.8);
+    }
+
+    50% {
+        opacity: 0.4;
+        box-shadow: 0 0 10px rgba(255, 255, 200, 0.3);
+    }
+
+    55% {
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(255, 255, 200, 0.8);
+    }
+
+    60% {
+        opacity: 0.2;
+        box-shadow: 0 0 5px rgba(255, 255, 200, 0.2);
+    }
+
+    65% {
+        opacity: 0.9;
+        box-shadow: 0 0 25px rgba(255, 255, 200, 0.7);
+    }
+
+    70% {
+        opacity: 0.1;
+        box-shadow: 0 0 2px rgba(255, 255, 200, 0.1);
+    }
+
+    75% {
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(255, 255, 200, 0.8);
+    }
+
+    80% {
+        opacity: 0.6;
+        box-shadow: 0 0 15px rgba(255, 255, 200, 0.5);
+    }
+
+    85% {
+        opacity: 0.95;
+        box-shadow: 0 0 28px rgba(255, 255, 200, 0.75);
+    }
+
+    90% {
+        opacity: 0.3;
+        box-shadow: 0 0 8px rgba(255, 255, 200, 0.3);
+    }
+
+    95% {
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(255, 255, 200, 0.8);
+    }
+
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 30px rgba(255, 255, 200, 0.8);
+    }
+}
+
+@keyframes subirBalançar {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(-40px);
+        /* sobe rápido */
+    }
+
+    35% {
+        transform: translateY(-30px);
+        /* balança esquerda */
+    }
+
+    45% {
+        transform: translateY(-40px);
+        /* balança direita */
+    }
+
+    55% {
+        transform: translateY(-30px);
+    }
+
+    65% {
+        transform: translateY(-30px);
+    }
+    
+    75% {
+        opacity: 1;
+        transform: translateY(-40px);
+    }
+    
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+        /* volta suavemente */
+    }
 }

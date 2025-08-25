@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import Particulas from "../../components/Particulas";
 import { FaReact, FaNpm, FaNodeJs, FaBootstrap, FaJsSquare, FaCss3Alt, FaHtml5, FaFigma, FaGithub, FaGitAlt, FaWindows, FaFileWord, FaFileExcel, FaFilePowerpoint, FaWordpress, FaDatabase } from "react-icons/fa";
-import { RiSupabaseLine, RiVercelFill } from "react-icons/ri";
+import { RiScrollToBottomFill, RiSupabaseLine, RiVercelFill } from "react-icons/ri";
 import { SiConstruct3 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 
@@ -44,6 +44,9 @@ export default function Home() {
                         </div>
                     </div>
                 </Particulas>
+                <div className={styles.rolarMais}>
+                    <RiScrollToBottomFill />
+                </div>
             </div>
             <Footer />
         </div>
