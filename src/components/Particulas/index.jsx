@@ -43,9 +43,9 @@ export default function Particulas({ children, className }) {
                 options={options}
             />
             {/* Conteúdo sobreposto */}
-            {/* <div className={styles.children + ' container'}> */}
+            <div className={styles.children + ' container'}>
                 {children}
-            {/* </div> */}
+            </div>
         </div>
     );
 }

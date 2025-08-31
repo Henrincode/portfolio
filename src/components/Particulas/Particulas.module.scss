@@ -7,4 +7,9 @@
         position: absolute;
         inset: 0;
     }
+
+    .children {
+        position: relative;
+        flex: 1;
+    }
 }
