@@ -1,51 +1,39 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useCallback, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import { loadSlim } from "@tsparticles/slim";
+import padrao from './padrao.json';
+import styles from './Particulas.module.scss';
+import { memo } from "react";
 
-import padrao from './padrao.json'
-import styles from './Particulas.module.scss'
+// Componente interno apenas para o Particles, nunca recebe props que mudam
+const ParticlesFixed = memo(() => {
+  const [init, setInit] = useState(false);
 
-export default function Particulas({ children, className }) {
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => setInit(true));
+  }, []);
 
-    const [init, setInit] = useState(false);
+  const particlesLoaded = useCallback(() => {}, []);
+  const options = useMemo(() => padrao, []);
 
-    // this should be run only once per application lifetime
-    useEffect(() => {
-        initParticlesEngine(async (engine) => {
-            // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-            // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-            // starting from v2 you can add only the features you need reducing the bundle size
-            //await loadAll(engine);
-            //await loadFull(engine);
-            await loadSlim(engine);
-            //await loadBasic(engine);
-        }).then(() => {
-            setInit(true);
-        });
-    }, []);
+  return <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={options} />;
+});
 
-    const particlesLoaded = (container) => {
-        // console.log(container);
-    };
-
-    const options = useMemo(() => (padrao), []);
-
-
-    return (
-        <div className={styles.Particulas + ' container ' + className}>
-            {/* Partículas no fundo */}
-            <Particles
-                id="tsparticles"
-                particlesLoaded={particlesLoaded}
-                options={options}
-            />
-            {/* Conteúdo sobreposto */}
-            <div className={styles.children + ' container'}>
-                {children}
-            </div>
-        </div>
-    );
+// Componente principal que recebe children dinâmico
+function Particulas({ children, className }) {
+  return (
+    <div className={styles.Particulas + ' container ' + className}>
+      {/* Partículas fixas no fundo */}
+      <ParticlesFixed />
+      
+      {/* Conteúdo sobreposto, que pode mudar */}
+      <div className={styles.children + ' container'}>
+        {children}
+      </div>
+    </div>
+  );
 }
+
+export default memo(Particulas);

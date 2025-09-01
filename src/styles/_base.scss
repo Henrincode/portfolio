@@ -21,7 +21,7 @@
 
 /* Cor ao passar o mouse */
 ::-webkit-scrollbar-thumb:hover {
-  background: #242424;
+  background: #444;
 }
 
 // --- / Barra de rolagem
@@ -39,6 +39,15 @@ body {
   font-family: "Inter";
   font-size: 24px;
   background-color: $color-background-page;
+
+  color: #ffffff;
+  // /* cor real da fonte */
+  // -webkit-font-smoothing: antialiased;
+  // /* Safari, Chrome */
+  // -moz-osx-font-smoothing: grayscale;
+  // /* Firefox */
+  // text-rendering: optimizeLegibility;
+  // /* suaviza curvas e ligaduras */
 }
 
 a {

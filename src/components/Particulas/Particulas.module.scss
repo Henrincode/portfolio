@@ -9,6 +9,7 @@
     }
 
     .children {
+        pointer-events: visibleStroke;
         position: relative;
         flex: 1;
     }

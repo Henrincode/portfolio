@@ -7,9 +7,19 @@ import { SiConstruct3 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 
 import styles from "./Home.module.scss"
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
+    const [rolado, setRolado] = useState(false);
+
+
+    useEffect(() => {
+    const handleScroll = () => setRolado(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
     return (
         <div className={styles.Home}>
             <div className={styles.telaToda + " container "}>
@@ -44,10 +54,12 @@ export default function Home() {
                         </div>
                     </div>
                 </Particulas>
-                <div className={styles.rolarMais}>
+                <div className={styles.rolarMais + " container " + (rolado && styles.ocultar)}>
+                    <span>ROLAR MAIS</span>
                     <RiScrollToBottomFill />
                 </div>
             </div>
+                <div className={styles.trabalhos + " container "}>Trabalhos</div>
             <Footer />
         </div>
     )

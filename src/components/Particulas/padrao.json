@@ -31,10 +31,10 @@
   "duration": 0,
   "fpsLimit": 120,
   "interactivity": {
-    "detectsOn": "window",
+    "detectsOn": "canvas",
     "events": {
       "onClick": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
       "onDiv": {

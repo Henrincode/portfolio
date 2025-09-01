@@ -65,20 +65,41 @@
 
         .rolarMais {
             position: absolute;
-            bottom: 10px;
-            color: rgba(#fff, 0.8);
+            bottom: 0;
+            color: rgba(#ffb703, 0.8);
             font-size: 50px;
             animation: subirBalançar 1.5s infinite;
-            filter: drop-shadow(0 0  10px #000);
+            filter: drop-shadow(0 0 10px #000);
+            user-select: none;
 
             svg {
                 display: block;
+            }
+
+            &.ocultar {
+                display: none;
+            }
+
+            span {
+                padding: 4px;
+                border-radius: 10px;
+                color: #000;
+                font-size: 16px;
+                background-color: rgba(#ffb703, 0.8);
             }
 
             @media (max-width: 100px) {
                 display: none;
             }
         }
+    }
+
+    .trabalhos {
+
+        min-height: 800px;
+        border-top: solid 2px #222;
+
+        background-color: #181818;
     }
 }
 
@@ -213,12 +234,12 @@
     65% {
         transform: translateY(-30px);
     }
-    
+
     75% {
         opacity: 1;
         transform: translateY(-40px);
     }
-    
+
     100% {
         opacity: 0;
         transform: translateY(0);
