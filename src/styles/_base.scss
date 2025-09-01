@@ -1,6 +1,32 @@
 @use "./mixins" as *;
 @use "./variables" as *;
 
+// --- Barra de rolagem
+
+/* Largura da barra */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Fundo da barra */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Parte que desliza */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 6px;
+}
+
+/* Cor ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #242424;
+}
+
+// --- / Barra de rolagem
+
+
 * {
   margin: 0;
   padding: 0;
