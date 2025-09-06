@@ -15,10 +15,10 @@ export default function Home() {
 
 
     useEffect(() => {
-    const handleScroll = () => setRolado(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+        const handleScroll = () => setRolado(window.scrollY > 50);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <div className={styles.Home}>
@@ -59,7 +59,7 @@ export default function Home() {
                     <RiScrollToBottomFill />
                 </div>
             </div>
-                <div className={styles.trabalhos + " container "}>Trabalhos</div>
+            <div className={styles.trabalhos + " container "}>Trabalhos</div>
             <Footer />
         </div>
     )

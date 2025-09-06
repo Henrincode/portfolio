@@ -5,11 +5,14 @@
     z-index: 100;
     position: fixed;
     top: 0;
+    max-width: 100%;
     padding: 10px;
+    border: 0 solid rgba($color-background-bar, 0.5);
     border-bottom: 1px solid rgba($color-background-bar, 0.5);
     background-color: rgba($color-background-bar, 0.2);
 
     backdrop-filter: blur(10px);
+    transition: 200ms;
 
     .box {
         justify-content: space-between;
@@ -25,7 +28,7 @@
             flex-direction: row;
             gap: 40px;
         }
-        
+
         @media (max-width: 600px) {
 
             justify-content: center;
@@ -35,4 +38,15 @@
             }
         }
     }
+
+}
+
+.NavReduce {
+    top: 10px;
+    max-width: 1200px;
+    width: calc(100% - 20px);
+    border: 1px solid rgba($color-background-bar, 0.2);
+    border-radius: 10px;
+
+
 }
